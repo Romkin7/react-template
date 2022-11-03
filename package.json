@@ -1,0 +1,21 @@
+{
+  "name": "react-template",
+  "version": "1.0.0",
+  "description": "React starter template, with custom Webpack 5 and babel setup.",
+  "main": "webpack.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Romkin7/react-template.git"
+  },
+  "scripts": {
+    "test": "jest",
+    "start": "webpack"
+  },
+  "keywords": [],
+  "author": {
+    "email": "devdesignrt@gmail.com",
+    "name": "DevDesign",
+    "url": "https://www.devdesign.fi"
+  },
+  "license": "ISC"
+}
