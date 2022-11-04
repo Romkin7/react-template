@@ -4,6 +4,6 @@ module.exports = {
     testEnvironment: 'jsdom',
     setupFilesAfterEnv: ['@testing-library/jest-dom/extend-expect'],
     moduleNameMapper: {
-        '\\.(css|less|scss|sss|styl)$': '<rootDir>/src',
+        '\\.(css|less|scss|sss|styl|svg)$': '<rootDir>/src',
     },
 };

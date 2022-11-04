@@ -6,7 +6,9 @@ describe('Button', () => {
     it('renders', () => {
         const { getAllByText } = render(<App />);
         const val = getAllByText(
-            (_, element) => element?.textContent === 'Hello World',
+            (_, element) =>
+                element?.textContent ===
+                'Edit src/components/App/App.tsx and save to reload.',
         );
 
         expect(val).toBeDefined();
