@@ -31,12 +31,23 @@ module.exports = {
                 use: ['ts-loader'],
             },
             {
-                test: /\.css$/,
+                test: /\.(s(a|c)ss)$/,
                 use: [
                     MiniCssExtractPlugin.loader,
                     'css-loader',
+                    'sass-loader',
                     'css-modules-typescript-loader',
                 ],
+            },
+            {
+                test: /\.svg/,
+                use: {
+                    loader: 'svg-url-loader',
+                    options: {
+                        // make all svg images to work in IE
+                        iesafe: true,
+                    },
+                },
             },
         ],
     },
