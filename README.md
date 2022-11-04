@@ -13,6 +13,6 @@ Clone this repository on your system and start developing React app.
 
 ## Run
 
-`yarn serve`
+`yarn start`
 
 http://localhost:3000
