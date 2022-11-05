@@ -5,11 +5,11 @@ import './App.scss';
 
 const App: FC = () => {
     return (
-        <div className="App">
-            <header className="App-header">
+        <div className="app">
+            <header className="app--header">
                 <img
                     src={logo as unknown as string}
-                    className="App-logo"
+                    className="app--logo"
                     alt="logo"
                 />
                 <p>
@@ -17,7 +17,7 @@ const App: FC = () => {
                     reload.
                 </p>
                 <a
-                    className="App-link"
+                    className="app--link"
                     href="https://reactjs.org"
                     target="_blank"
                     rel="noopener noreferrer"

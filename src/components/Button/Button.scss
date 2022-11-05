@@ -1,0 +1,9 @@
+.button {
+    color: #ffffff;
+    padding: 1rem 1.6rem;
+
+    &--success {
+        background: #6b177c;
+        border: 2px ridge #6b177c;
+    }
+}

@@ -1,4 +1,5 @@
 import React, { FC, PropsWithChildren, MouseEvent } from 'react';
+import './Button.scss';
 
 interface IButtonProps {
     type: 'button' | 'reset' | 'submit';
