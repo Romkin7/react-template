@@ -1,6 +1,8 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const InterpolateHtmlPlugin = require('react-dev-utils/InterpolateHtmlPlugin');
+const { title, description } = require('./config/app.config');
 
 module.exports = {
     // Where files should be sent once they are bundled
@@ -14,9 +16,10 @@ module.exports = {
     },
     // webpack 5 comes with devServer which loads in development mode
     devServer: {
+        liveReload: true,
         port: process.env.PORT || 3000,
         hot: true,
-        open: [`http://locahost:${this.port}`],
+        open: true,
     },
     // Rules of how webpack will take our files, complie & bundle them for the browser
     module: {
@@ -48,7 +51,19 @@ module.exports = {
         ],
     },
     plugins: [
-        new HtmlWebpackPlugin({ template: './public/index.html' }),
+        // Generates an `index.html` file with the <script> injected.
+        new HtmlWebpackPlugin({
+            inject: true,
+            template: path.resolve('public/index.html'),
+        }),
+        // Makes the public URL available as %PUBLIC_URL% in index.html, e.g.:
+        // <link rel="icon" href="%PUBLIC_URL%/favicon.ico">
+        new InterpolateHtmlPlugin(HtmlWebpackPlugin, {
+            TITLE: title,
+            DESCRIPTION: description,
+            // You can pass any key-value pairs, this was just an example.
+            // TITLE: React Template App will replace %TITLE% with React Template App in index.html.
+        }),
         new MiniCssExtractPlugin(),
     ],
 };

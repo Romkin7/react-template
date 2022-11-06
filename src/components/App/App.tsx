@@ -33,6 +33,16 @@ const App: FC = () => {
                 >
                     Hello World!
                 </Button>
+                <br />
+                <Button
+                    type="button"
+                    variant="warning"
+                    onClick={(event: MouseEvent<HTMLButtonElement>) =>
+                        event.preventDefault()
+                    }
+                >
+                    Hello World!
+                </Button>
             </header>
         </div>
     );
